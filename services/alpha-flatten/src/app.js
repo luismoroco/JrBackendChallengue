@@ -14,7 +14,7 @@ app.use(bodyParser.json());
 app.use('/', root);
 
 mongoose.connect(
-  "mongodb://localhost:27017/db", 
+  "mongodb://mongodb:27017/db", 
   {useNewUrlParser: true,
   useUnifiedTopology: true}
 ).then(() => {

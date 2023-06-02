@@ -19,7 +19,6 @@ class QuoteController {
       let autors = await AutorService.getAll();
       for (const obj of autors) {
         const items = await QuoteService.getBy(obj.id as number) as TQuote[];
-        console.log(items);
         obj['quotes'] = items;
       }
 
