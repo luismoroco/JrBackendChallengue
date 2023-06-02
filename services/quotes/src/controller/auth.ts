@@ -2,13 +2,14 @@ import { Request, Response } from "express";
 import { UserService } from "../service/user";
 import httpStatus from 'http-status';
 import { generateToken } from "../utils/tokens";
+import { TUser } from "../utils/type";
 
 class AuthController {
   async login(req: Request, res: Response) {
     const { body } = req;
     try {
-      const data = await UserService.getDataByUsername(body.username);
-      if (data.id === -1) {
+      const data = await (UserService.getDataByUsername(body.username)) as TUser[];
+      if (data[0].id === -1) {
         res
         .status(httpStatus.UNPROCESSABLE_ENTITY)
         .json({ msg: `User ${body.username} doesn't exist` });

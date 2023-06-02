@@ -1,5 +1,5 @@
 import { UserRepository } from "../repository/user";
-import { ErrTUser, TUser } from "../utils/type";
+import { TUser } from "../utils/type";
 
 export const UserService = {
   repository: new UserRepository(),
