@@ -21,3 +21,22 @@ export type TQuotes = {
   name: string,
   quotes?: TQuoteInfo[]
 };
+
+export type TUser = {
+  id?: number,
+  username?: string,
+  password?: string
+};
+
+export const ErrTUser: TUser = {
+  id: -1,
+  username: "",
+  password: ""
+};
+
+export interface IPayload {
+  id: number;
+  role: string;
+  iat: number;
+  exp: number;
+}

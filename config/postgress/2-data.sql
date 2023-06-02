@@ -21,3 +21,7 @@ VALUES
   ('Be careful, lest in casting out your demon you exorcise the best thing in you.', 3),
   ('The secret for harvesting from existence the greatest fruitfulness and the greatest enjoyment is: to live dangerously!', 3);
 
+INSERT INTO users (username, password)
+VALUES
+  ('root', 'makanaki'),
+  ('master', 'faraonloveshady');

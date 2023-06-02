@@ -20,3 +20,23 @@ services:
     restart: always
     ports:
       - '${MG_PORT}:27017'
+  
+  web-quotes:
+    build: 
+      context: services/quotes
+      dockerfile: Dockerfile
+    container_name: web-quotes
+    ports:
+      - 5000:5000
+    depends_on:
+      - db
+
+  web-alpha-flatten:
+    build: 
+      context: services/alpha-flatten
+      dockerfile: Dockerfile
+    container_name: web-alpha-flatt
+    ports:
+      - 5001:5001
+    depends_on:
+      - mongodb

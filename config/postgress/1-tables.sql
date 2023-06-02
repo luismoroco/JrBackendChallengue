@@ -11,3 +11,9 @@ CREATE TABLE IF NOT EXISTS quotes (
   created_at DATE DEFAULT current_date,
   autor_id INTEGER REFERENCES autor(id)
 );
+
+CREATE TABLE IF NOT EXISTS users (
+  id SERIAL PRIMARY KEY,
+  username VARCHAR(255),
+  password VARCHAR(255)
+);

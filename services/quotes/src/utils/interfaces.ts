@@ -10,6 +10,10 @@ export interface ISave<T> {
   save(o: T): Promise<void>;
 };
 
+export interface IGetOneBy<T, K> {
+  getOneBy(key: K): Promise<T>;
+};
+
 export interface IGetALL<T> {
   getAll(): Promise<T[]>;
 };

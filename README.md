@@ -14,6 +14,7 @@ Asegúrate de tener instalado lo siguiente:
 - Git
 - Docker
 - Docker Compose
+- Postman
 
 ## Configuración
 
