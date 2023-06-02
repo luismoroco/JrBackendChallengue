@@ -1,0 +1,3 @@
+DROP DATABASE IF EXISTS db_quotes;
+
+CREATE DATABASE db_quotes;

@@ -1,0 +1,14 @@
+version: '3'
+services:
+  db:
+    image: docker.io/postgres:latest
+    container_name: db-quotes
+    restart: always
+    env_file: .env 
+    environment:
+      - POSTGRES_USER=${PG_USER}
+      - POSTGRES_PASSWORD=${PG_PASS}
+    volumes:
+      - ./config/postgress:/docker-entrypoint-initdb.d 
+    ports:
+      - '${PG_PORT}:5432'
