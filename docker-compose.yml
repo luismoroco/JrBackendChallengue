@@ -12,3 +12,11 @@ services:
       - ./config/postgress:/docker-entrypoint-initdb.d 
     ports:
       - '${PG_PORT}:5432'
+
+  mongodb:
+    image: mongo:latest
+    container_name: mongodb
+    env_file: .env
+    restart: always
+    ports:
+      - '${MG_PORT}:27017'
